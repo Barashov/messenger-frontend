@@ -1,5 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+import vue3GoogleLogin from 'vue3-google-login'
+
 import router from './router'
 import store from './store'
 import ui from './ui'
@@ -12,4 +14,7 @@ for (let element of ui) {
 
 app.use(router)
 app.use(store)
+app.use(vue3GoogleLogin, {
+    clientId: 'ok'
+})
 app.mount('#app')

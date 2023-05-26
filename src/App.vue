@@ -8,7 +8,7 @@ import { RouterLink, RouterView } from 'vue-router'
   <Header></Header>
   <div class="main">
     
-    <div class="box">
+    <div class="box hide-on-mobile">
       <div class="friends white-shadow"></div>
     </div>
       
@@ -40,9 +40,15 @@ export default {
 
 <style scoped>
 @media (max-width: 768px) {
-  .page {
-    background-color: brown;
+  .hide-on-mobile {
+    display: none;
   }
+  .main {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+  }
+
 }
 
 @media (min-width: 768px) {
@@ -79,5 +85,6 @@ export default {
     background-color: rgb(252, 252, 252);
   }
 }
+
 
 </style>

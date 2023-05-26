@@ -17,6 +17,15 @@ export default {
         }
     }
 }
-
- 
 </script>
+
+
+<style scoped>
+input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    margin: 0;
+}
+</style>

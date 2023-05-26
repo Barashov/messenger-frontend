@@ -1,19 +1,42 @@
+<script setup>
+const callback = (response) => {
+    console.log(response)
+}
+</script>
+
 <template>
     
     <div class="main">
+        
         <form @submit.prevent>
             <h1>Регистрация</h1>
-            <Input
+
+            <div class="input-box">
+                <Input
                 placeholder="имя"
                 v-model="username"
                 @input="onInputUsername"
                 @change="onChangeUsername"/>
-            <br>
-            <Input placeholder="пароль" v-model="password"></Input>
-            <br>
-            <Button>зарегестрироваться</Button>
+                <Error>{{ username_error }}</Error>
+            </div>
 
+            <div class="input-box">
+                <Input placeholder="пароль" v-model="password"></Input>
+                <Error>{{ password_error }}</Error>
+            </div>
+
+            <div>
+                <Button>зарегестрироваться</Button>
+            </div>
+            
+            
         </form>
+        
+        <GoogleLogin :callback="callback"/>
+        
+        <Hr></Hr>
+
+        
     </div>
 
 </template>
@@ -23,9 +46,9 @@ export default {
     data() {
         return {
             username: '',
-            password: '',
-            username_error: '',
-            password_error: ''
+            password: 'dfd',
+            username_error: 'username is already used',
+            password_error: 'dfdf'
         }
     },
     methods: {
@@ -45,7 +68,12 @@ export default {
 <style scoped>
     .main {
         display: flex;
-        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .input-box {
+        margin-bottom: 10px;
+        height: 50px
     }
 </style>
 
