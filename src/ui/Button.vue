@@ -1,5 +1,5 @@
 <template>
-    <button type="button"><slot></slot></button>
+        <button type="button"><slot></slot></button>
 </template>
 
 
@@ -15,6 +15,6 @@ button {
     padding: 8px;
     border: 1px solid black;
     border-radius: 3px;
-    margin: 20px
+    width: 100%;
 }
 </style>

@@ -6,6 +6,7 @@ import { RouterLink } from 'vue-router'
         <!-- <RouterLink to="/profile">profile</RouterLink> -->
         <!-- <RouterLink to="/chats">chats</RouterLink> -->
         <RouterLink to="/registration">registration</RouterLink>
+        <RouterLink to="/login">login</RouterLink>
     </nav>
 </template>
 
