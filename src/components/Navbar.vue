@@ -7,6 +7,7 @@ import { RouterLink } from 'vue-router'
         <!-- <RouterLink to="/chats">chats</RouterLink> -->
         <RouterLink to="/registration">registration</RouterLink>
         <RouterLink to="/login">login</RouterLink>
+        <RouterLink to="/chats">chats</RouterLink>
     </nav>
 </template>
 
@@ -16,6 +17,8 @@ import { RouterLink } from 'vue-router'
     nav {
         background-color: blue;
         width: 100%;
+        display: flex;
+        justify-content: space-evenly;
     
     }
 

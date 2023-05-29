@@ -4,7 +4,7 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <template>
        
-  <Header></Header>
+  <Navbar></Navbar>
   <div class="main">
     
     <div class="box hide-on-mobile">
@@ -20,20 +20,21 @@ import { RouterLink, RouterView } from 'vue-router'
 </template>
 
 <script>
-import Header from './components/Header.vue'
+import Navbar from './components/Navbar.vue';
 export default {
-  components: [
-    Header
-  ],
-  mounted() {
-    if (this.$store.state.auth.is_auth == false) {
-      this.$router.push('/login')
-    }
-    else {
-      // check auth token 
-      this.$router.push('/profile')
-    }
-  }
+    components: [
+        Navbar
+    ],
+    mounted() {
+        if (this.$store.state.auth.is_auth == false) {
+            this.$router.push("/login");
+        }
+        else {
+            // check auth token 
+            this.$router.push("/profile");
+        }
+    },
+    components: { Navbar }
 }
 </script>
 
@@ -46,6 +47,9 @@ export default {
     display: flex;
     height: 100%;
     justify-content: center;
+  }
+  .page {
+      width: 100%;
   }
 
 }
@@ -81,7 +85,7 @@ export default {
 
   .white-shadow {
     box-shadow: 0 5px 5px 5px rgb(186, 173, 173);
-    background-color: rgb(252, 252, 252);
+    background-color: rgb(242, 242, 242);
   }
 }
 
