@@ -16,7 +16,13 @@ export default {
     props: ["chat"],
     methods: {
         onClick() {
-            console.log(this.chat.id)
+            this.$router.push({
+                path: '/chat',
+                query: {
+                    id: this.chat.id,
+                    name: this.chat.name,
+                    image: this.chat.image}
+            })
         }
     }
 }

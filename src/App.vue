@@ -44,12 +44,11 @@ export default {
     display: none;
   }
   .main {
-    display: flex;
-    height: 100%;
-    justify-content: center;
+    /* display: flex; */
+    height: 100vh;
   }
   .page {
-      width: 100%;
+      height: 100%;
   }
 
 }
@@ -58,7 +57,6 @@ export default {
   .main {
     display: flex;
     height: 100%;
-    margin-top: 1%;
   }
   .box {
     position: relative;
@@ -69,8 +67,8 @@ export default {
   .page {
     width:  40%;
     height: 650px;
-    padding: 5px;
     border-radius: 4%;
+    margin-top: 20px;
   }
 
   .friends {
