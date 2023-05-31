@@ -1,14 +1,21 @@
 <template>
 <div class="main">
-
+    <ChatInput @newMessage="newMessage"/>
 </div>
 
 </template>
 
 
 <script>
+import ChatInput from './ChatInput.vue';
+
 export default {
-    
+    components: { ChatInput },
+    methods: {
+        newMessage(text) {  
+            console.log(text)
+        }
+    }
 }
 </script>
 
@@ -16,8 +23,11 @@ export default {
 <style scoped>
 .main {
     width: 100%;
-    height: 80px !important;
+    height: 50px !important;
     background-color: blue;
-    border-radius: 2vh
+    border-radius: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 </style>

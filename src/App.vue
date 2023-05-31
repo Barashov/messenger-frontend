@@ -3,7 +3,7 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-       
+<div class="main-mobile">
   <Navbar></Navbar>
   <div class="main">
     
@@ -15,6 +15,7 @@ import { RouterLink, RouterView } from 'vue-router'
       <RouterView/>
     </div>
   </div>
+</div>
   
   
 </template>
@@ -43,9 +44,14 @@ export default {
   .hide-on-mobile {
     display: none;
   }
+  .main-mobile {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
   .main {
     /* display: flex; */
-    height: 100vh;
+    flex: auto;
   }
   .page {
       height: 100%;

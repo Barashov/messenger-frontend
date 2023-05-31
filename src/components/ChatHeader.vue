@@ -1,5 +1,7 @@
 <template>
-<div class="main"></div>
+<div class="main">
+    
+</div>
 </template>
 
 
@@ -15,5 +17,6 @@ export default {
     width: 100%;
     height: 80px !important;
     background-color: blue;
+    border-radius: 3vh;
 }
 </style>
