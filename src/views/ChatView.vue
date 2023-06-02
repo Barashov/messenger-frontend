@@ -4,9 +4,10 @@
             <ChatHeader/>
         </div>
         <div class="content">
+            <Chat :messages="messages"/>
         </div>
         <div class="footer">
-            <ChatFooter/>
+            <ChatFooter @newMessage="newMessage"/>
         </div>
     </div>
     
@@ -16,20 +17,29 @@
 <script>
 import ChatFooter from '../components/ChatFooter.vue';
 import ChatHeader from '../components/ChatHeader.vue';
+import Chat from '../components/Chat.vue';
 export default {
     data() {
         return {
-            chat: null
+            chat: null,
+            messages: []
         };
     },
-    components: [
-        ChatFooter,
-        ChatHeader
-    ],
     mounted() {
         this.chat = this.$route.query;
+        this.messages = [
+            {id: 1, text: "hello", sent_by: {id: 1, username: 'alex'}, created_at: '22:00'},
+            {id: 2, text: 'ddddddddddddddddddddddd ddddddddddddddddddddddddd ddddddddddddddddddddddddd ddddddddddddddddddddddddddddddddd'}
+        ]
     },
-    components: { ChatFooter, ChatHeader }
+    components: { ChatFooter, ChatHeader, Chat },
+    methods: {
+        // сделать подгрузку новых сообщений
+        newMessage(text) {
+            const message = {text: text}
+            this.messages.push(message)
+        }
+    }
 }
 </script>
 

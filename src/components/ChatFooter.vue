@@ -13,7 +13,7 @@ export default {
     components: { ChatInput },
     methods: {
         newMessage(text) {  
-            console.log(text)
+            this.$emit('newMessage', text)
         }
     }
 }
@@ -26,6 +26,7 @@ export default {
     height: 50px !important;
     background-color: blue;
     border-radius: 2vh;
+    /* добавить нормальные скругления */
     display: flex;
     justify-content: center;
     align-items: center;
